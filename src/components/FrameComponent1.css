@@ -1,0 +1,89 @@
+.whatsapp-image-2021-05-23-at-131 {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  object-fit: contain;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  transform: scale(1.537);
+}
+.wrapper-whatsapp-image-2021-0518 {
+  height: 82px;
+  width: 82px;
+  position: relative;
+  border-radius: var(--br-324xl-5);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.redbull1 {
+  position: relative;
+  font-size: var(--font-size-base);
+  display: inline-block;
+  min-width: 56px;
+  z-index: 1;
+}
+.bebida-energizante-sabor,
+.sanda {
+  margin: 0;
+}
+.bebida-energizante-sabor-container {
+  position: relative;
+  font-weight: 500;
+  color: var(--color-gray-100);
+  z-index: 1;
+}
+.energy-quantity-label,
+.qty-110 {
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  z-index: 1;
+}
+.energy-quantity-label {
+  min-width: 14px;
+  white-space: nowrap;
+}
+.qty-110 {
+  min-width: 32px;
+}
+.energy-quantity-details {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+  color: var(--color-white);
+}
+.frame-wrapper31,
+.redbull-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.redbull-parent {
+  align-self: stretch;
+  justify-content: flex-start;
+  gap: var(--gap-12xs-5);
+}
+.frame-wrapper31 {
+  flex: 1;
+  justify-content: flex-end;
+  padding: 0 0 var(--padding-5xs);
+}
+.wrapper-whatsapp-image-2021-05-parent10 {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: var(--gap-2xs);
+  text-align: left;
+  font-size: var(--font-size-xs);
+  color: var(--color-lightgray);
+  font-family: var(--font-roboto);
+}
