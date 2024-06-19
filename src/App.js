@@ -12,6 +12,9 @@ import Profile from "./components/Profile";
 import RDENES from "./pages/RDENES";
 import VENTAS from "./pages/VENTAS";
 import PRODUCTOS from "./pages/PRODUCTOS";
+import CONTACTO from "./pages/CONTACTO";
+import UBICACIN from "./pages/UBICACIN";
+import REALIZARPEDIDO from "./pages/REALIZARPEDIDO";
 
 function App() {
   const action = useNavigationType();
@@ -57,6 +60,18 @@ function App() {
         title = "";
         metaDescription = "";
         break;
+      case "/contacto":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/ubicacin":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/realizar-pedido":
+        title = "";
+        metaDescription = "";
+        break;
     }
 
     if (title) {
@@ -82,6 +97,9 @@ function App() {
       <Route path="/rdenes" element={<RDENES />} />
       <Route path="/ventas" element={<VENTAS />} />
       <Route path="/productos" element={<PRODUCTOS />} />
+      <Route path="/contacto" element={<CONTACTO />} />
+      <Route path="/ubicacin" element={<UBICACIN />} />
+      <Route path="/realizar-pedido" element={<REALIZARPEDIDO />} />
     </Routes>
   );
 }
