@@ -1,0 +1,297 @@
+.frame-child3 {
+  height: 74px;
+  width: 447px;
+  position: relative;
+  border-radius: var(--br-3xs);
+  display: none;
+  mix-blend-mode: normal;
+  max-width: 100%;
+}
+.registrar-usuario {
+  margin: 0;
+  height: 47px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  z-index: 1;
+}
+.register-button,
+.vector-group {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.vector-group {
+  border-radius: var(--br-3xs);
+  background: linear-gradient(90deg, #ffa114, #f5350b);
+  padding: var(--padding-5xs) var(--padding-15xl) var(--padding-lgi)
+    var(--padding-16xl);
+  white-space: nowrap;
+}
+.register-button {
+  padding: 0 var(--padding-32xl);
+  font-size: var(--font-size-29xl);
+}
+.introduce-los-siguientes {
+  width: 590px;
+  position: relative;
+  line-height: 38px;
+  font-weight: 800;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 100%;
+}
+.instructions {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0 0 var(--padding-7xl);
+  box-sizing: border-box;
+  max-width: 100%;
+  font-size: var(--font-size-13xl);
+}
+.input-values-child,
+.nombre-de-usuario1 {
+  width: 400px;
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+.input-values-child {
+  height: 49px;
+  width: 518px;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-whitesmoke-200);
+  display: none;
+}
+.input-values,
+.username-password {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.input-values {
+  align-self: stretch;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-whitesmoke-200);
+  flex-direction: row;
+  padding: var(--padding-6xs) var(--padding-mini) var(--padding-xs);
+}
+.username-password {
+  width: 518px;
+  flex-direction: column;
+  padding: 0 0 var(--padding-lgi);
+  gap: var(--gap-3xs);
+}
+.correo-institucional {
+  flex: 1;
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+.email-input1 {
+  width: 410px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-8xs);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.frame-child4,
+.rectangle-parent2 {
+  border-radius: var(--br-5xs);
+  background-color: var(--color-whitesmoke-200);
+}
+.frame-child4 {
+  height: 49px;
+  width: 518px;
+  position: relative;
+  display: none;
+  max-width: 100%;
+}
+.rectangle-parent2 {
+  align-self: stretch;
+  flex-direction: row;
+  padding: var(--padding-6xs) var(--padding-mini) var(--padding-xs);
+}
+.email-input-parent,
+.i-d-input-child,
+.rectangle-parent2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.email-input-parent {
+  width: 518px;
+  flex-direction: column;
+  padding: 0 0 var(--padding-3xs);
+  gap: var(--gap-xs);
+}
+.i-d-input-child {
+  width: 412px;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  height: 27px;
+  flex-direction: row;
+  padding: 0 var(--padding-7xs);
+  font-family: var(--font-roboto);
+  font-size: var(--font-size-5xl);
+  color: var(--color-white);
+}
+.frame-child5 {
+  height: 49px;
+  width: 518px;
+  position: relative;
+  border-radius: var(--br-5xs);
+  display: none;
+  max-width: 100%;
+}
+.icon {
+  height: 30px;
+  width: 30px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.vector-container {
+  align-self: stretch;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-whitesmoke-200);
+  flex-direction: row;
+  padding: var(--padding-3xs-5) var(--padding-sm);
+  box-sizing: border-box;
+}
+.i-d-input,
+.i-d-input-wrapper,
+.vector-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.i-d-input {
+  flex: 1;
+  flex-direction: column;
+  gap: var(--gap-mid-5);
+}
+.i-d-input-wrapper {
+  width: 520px;
+  flex-direction: row;
+  padding: 0 var(--padding-12xs) var(--padding-4xs-5);
+  box-sizing: border-box;
+}
+.contrasea1,
+.frame-child6 {
+  position: relative;
+  max-width: 100%;
+}
+.contrasea1 {
+  width: 400px;
+  border: 0;
+  outline: 0;
+  font-family: var(--font-roboto);
+  font-size: var(--font-size-5xl);
+  background-color: transparent;
+  height: 27px;
+  color: var(--color-white);
+  text-align: left;
+  display: inline-block;
+  flex-shrink: 0;
+  padding: 0;
+}
+.frame-child6 {
+  height: 49px;
+  width: 518px;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-whitesmoke-200);
+  display: none;
+}
+.horn-icon {
+  height: 30px;
+  width: 30px;
+  position: relative;
+  z-index: 1;
+}
+.rectangle-parent3 {
+  align-self: stretch;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-whitesmoke-200);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-3xs) var(--padding-mini) var(--padding-4xs);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.username-password1 {
+  width: 518px;
+  gap: var(--gap-sm);
+}
+.account-details,
+.input-fields1,
+.username-password1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.input-fields1 {
+  align-self: stretch;
+  gap: var(--gap-3xl);
+}
+.account-details {
+  flex: 1;
+  padding: var(--padding-34xl) 0 0;
+  box-sizing: border-box;
+  min-width: 413px;
+  text-align: left;
+  font-size: var(--font-size-5xl);
+  color: var(--color-white);
+  font-family: var(--font-roboto);
+}
+@media screen and (max-width: 750px) {
+  .introduce-los-siguientes {
+    font-size: var(--font-size-7xl);
+    line-height: 38px;
+  }
+  .account-details {
+    padding-top: var(--padding-15xl);
+    box-sizing: border-box;
+    min-width: 100%;
+  }
+}
+@media screen and (max-width: 675px) {
+  .register-button {
+    padding-left: var(--padding-6xl);
+    padding-right: var(--padding-6xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .introduce-los-siguientes {
+    line-height: 29px;
+  }
+  .contrasea1,
+  .correo-institucional,
+  .introduce-los-siguientes,
+  .nombre-de-usuario1 {
+    font-size: var(--font-size-lgi);
+  }
+}

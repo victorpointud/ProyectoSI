@@ -1,0 +1,122 @@
+.admin {
+  text-decoration: none;
+  align-self: stretch;
+  height: 27px;
+  position: relative;
+  color: inherit;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 3;
+}
+.admin-wrapper {
+  width: 58px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-5xl) 0 0;
+  box-sizing: border-box;
+}
+.iconswith-off {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  max-height: 100%;
+  width: 77px;
+  object-fit: contain;
+  mix-blend-mode: normal;
+  z-index: 2;
+}
+.user-icon-background {
+  position: absolute;
+  top: 26px;
+  left: 48px;
+  border-radius: 50%;
+  background-color: var(--color-forestgreen);
+  width: 13px;
+  height: 13px;
+  z-index: 3;
+}
+.iconswith-off-parent {
+  height: 64px;
+  flex: 1;
+  position: relative;
+}
+.cliente {
+  align-self: stretch;
+  height: 27px;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.cliente-wrapper {
+  width: 63px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-5xl) 0 0;
+  box-sizing: border-box;
+}
+.frame-parent11,
+.frame-wrapper6 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.frame-parent11 {
+  width: 215px;
+  justify-content: flex-start;
+}
+.frame-wrapper6 {
+  align-self: stretch;
+  justify-content: flex-end;
+}
+.nombre-de-usuario {
+  width: 545px;
+  position: relative;
+  font-size: var(--font-size-5xl);
+  display: inline-block;
+  max-width: 100%;
+  z-index: 1;
+}
+.frame-parent10 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.user-field-background {
+  width: 518px;
+  height: 49px;
+  position: relative;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-whitesmoke-200);
+  max-width: 100%;
+  z-index: 1;
+}
+.frame-parent9 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-14xl);
+  box-sizing: border-box;
+  gap: var(--gap-6xs);
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--color-white);
+  font-family: var(--font-roboto);
+}
+@media screen and (max-width: 450px) {
+  .nombre-de-usuario {
+    font-size: var(--font-size-lgi);
+  }
+}
