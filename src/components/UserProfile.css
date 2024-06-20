@@ -1,0 +1,22 @@
+/* src/components/UserProfile.css */
+.profile-container {
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.profile-details {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+}
+
+.profile-details p {
+  margin: 10px 0;
+}
+
+.profile-details strong {
+  margin-right: 10px;
+}
