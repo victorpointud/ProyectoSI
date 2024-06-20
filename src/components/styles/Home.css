@@ -1,28 +1,21 @@
-/* src/components/Home.css */
-.home-container {
-  padding: 20px;
-  text-align: center;
-  background-color: #fff;
+
+* {
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
-.home-content {
+ body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #d44c4c;
+}
+
+.header {
   display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-}
-
-.home-section {
-  border: 1px solid #ddd;
-  padding: 20px;
-  width: 30%;
-  border-radius: 8px;
-  background-color: #f8f9fa;
-}
-
-.home-section h2 {
-  margin-top: 0;
-}
-
-.home-section p {
-  margin: 10px 0;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: #d2d2d2;
 }

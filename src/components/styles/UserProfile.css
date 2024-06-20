@@ -2,15 +2,15 @@
 .profile-container {
   padding: 20px;
   text-align: center;
-  background-color: #fff;
+  background-color: #b31a1a;
 }
 
 .profile-details {
   margin-top: 20px;
-  border: 1px solid #ddd;
+  border: 1px solid #100b0b;
   padding: 20px;
   border-radius: 8px;
-  background-color: #f8f9fa;
+  background-color: #1c5ea0;
 }
 
 .profile-details p {

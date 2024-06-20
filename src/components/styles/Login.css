@@ -1,11 +1,11 @@
-/* src/components/Login.css */
+
 .login-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #f8f9fa;
+  background-color: #000000;
 }
 
 button {
@@ -17,11 +17,11 @@ button {
 
 button:hover {
   background-color: #007bff;
-  color: white;
+  color: rgb(172, 36, 36);
 }
 
 p {
   margin-top: 20px;
   font-size: 14px;
-  color: red;
+  color: rgb(165, 123, 123);
 }
