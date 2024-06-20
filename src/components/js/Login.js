@@ -1,6 +1,6 @@
 // src/components/Login.js
 import React, { useState } from 'react';
-import firebase from '../firebase';
+import firebase from '../../firebase';
 
 function Login() {
   const [loading, setLoading] = useState(false);

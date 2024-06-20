@@ -1,6 +1,6 @@
 // src/components/UserProfile.js
 import React, { useState, useEffect } from 'react';
-import firebase from '../firebase';
+import firebase from '../../firebase';
 
 function UserProfile() {
   const [user, setUser] = useState(null);
