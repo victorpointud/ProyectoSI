@@ -4,9 +4,9 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Login from './components/js/Login';
 import Home from './components/js/Home';
 import UserProfile from './components/js/UserProfile';
-import './components/Home.css';
-import './components/Login.css';
-import './components/UserProfile.css';
+import './components/styles/Home.css';
+import './components/styles/Login.css';
+import './components/styles/UserProfile.css';
 
 function App() {
   return (
