@@ -1,15 +1,154 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Unimet</title>
-  <link rel="stylesheet" href="/src/components/styles/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UnimetStore</title>
+    <meta name="description" content="Página web de blog de café">
+
+    <!-- Prefetch -->
+    <link rel="prefetch" href="nosotros.html" as="document">
+
+    <!-- Preload -->
+    <link rel="preload" href="/src/components/styles/normalize.css" as="style">
+    <link rel="stylesheet" href="/src/components/styles/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" as="font">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="preload" href="/src/components/styles/style.css" as="style">
+    <link rel="stylesheet" href="/src/components/styles/style.css">
 </head>
 <body>
-  <div id="root"></div>
 
-  <header class="header">
-  </header>
+    <header class="header">
+
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="/public/index.html">
+                    <div class="logo__container">
+                        <img class="logo__imagen" src="/src/components/img/unimetStorelogo.png" alt="Logo Imagen">
+                        <h1 class="logo__nombre no-margin centrar-texto">Unimet<span class="logo__bold">Store</h1>
+                    </div>
+                </a>
+
+                <nav class="navegacion">
+                    <a href="" class="navegacion__enlace">Productos</a>
+                    <a href="" class="navegacion__enlace">Contacto</a>
+                    <a href="" class="navegacion__enlace">Conocenos</a>
+                    <a href="" class="navegacion__enlace">Iniciar Sesión</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="header__texto">
+            <h2 class="no-margin">Bienvenidos</h2>
+            <p class="no-margin">Aprende de los expertos con las mejores recetas y consejos</p>
+        </div>
+    </header>
+
+    <div class="contenedor contenido-principal">
+        <main class="blog">
+            <h3>Algunos Productos</h3>
+
+            <secarticletion class="entrada">
+                <div class="entrada__imagen">
+                    <picture>
+                        <source loading="lazy"  srcset="/src/components/img/MALTEADAS.jpg" type="image/jpg">
+                        <img loading="lazy" src="/src/components/img/MALTEADAS.jpg" alt="imagen blog"> 
+                    </picture>
+                </div>
+
+                <div class="entrada__contenido">
+                    <h4 class="no-margin">Malteadas</h4>
+                    <a href="/public/entrada.html" class="boton boton--primario">Ver Opciones</a>
+                </div>
+            </article>
+
+            <article class="entrada">
+                <div class="entrada__imagen">
+                    <picture>
+                        <source loading="lazy"  srcset="/src/components/img/nosotros.jpg" type="image/jpg">
+                        <img loading="lazy" src="/src/components/img/nosotros.jpg" alt="imagen blog"> 
+                    </picture>
+                </div>
+
+                <div class="entrada__contenido">
+                    <h4 class="no-margin">Cafés</h4>
+                    <a href="/public/entrada.html" class="boton boton--primario">Ver Opciones</a>
+                </div>
+            </article>
+
+            <article class="entrada">
+                <div class="entrada__imagen">
+                    <picture>
+                        <source loading="lazy"  srcset="/src/components/img/energy.jpg" type="image/jpg">
+                        <img loading="lazy" src="/src/components/img/energy.jpg" alt="imagen blog"> 
+                    </picture>
+                </div>
+
+                <div class="entrada__contenido">
+                    <h4 class="no-margin">Otras Bebidas</h4>
+                    <a href="/public/entrada.html" class="boton boton--primario">Ver Opciones</a>
+                </div>
+            </article>
+        </main>
+        <aside class="sidebar">
+            <h3>Redes Sociales</h3>
+
+            <ul class="cursos no-padding">
+                <li class="widget-curso">
+                    <div class="red__container">
+                        <img class="red__imagen" src="/src/components/img/instagram.png" alt="Redes Imagen">
+                        <a href="/public/entrada.html" class="boton boton--secundario">Instagram</a>
+                    </div>
+                </li>
+
+                <li class="widget-curso">
+                    <div class="red__container">
+                        <img class="red__imagen" src="/src/components/img/linkedin.webp" alt="Redes Imagen">
+                        <a href="/public/entrada.html" class="boton boton--secundario">Linkedin</a>
+                    </div>
+                </li>
+
+                <li class="widget-curso">
+                    <div class="red__container">
+                        <img class="red__imagen" src="/src/components/img/facebook.webp" alt="Redes Imagen">
+                        <a href="/public/entrada.html" class="boton boton--secundario">Facebook</a>
+                    </div>
+                </li>
+
+                <li class="widget-curso">
+                    <div class="red__container">
+                        <img class="red__imagen" src="/src/components/img/twitter.jpg" alt="Redes Imagen">
+                        <a href="/public/entrada.html" class="boton boton--secundario">Twitter </a>
+                    </div>
+                </li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="/public/index.html">
+                    <div class="logo__container">
+                        <img class="logo__imagen" src="/src/components/img/unimetStorelogo.png"" alt="Logo Imagen">
+                        <h1 class="logo__nombre no-margin centrar-texto">Unimet<span class="logo__bold">Store</h1>
+                    </div>
+                </a>
+
+                <nav class="navegacion">
+                    <a href="" class="navegacion__enlace">Productos</a>
+                    <a href="" class="navegacion__enlace">Contacto</a>
+                    <a href="" class="navegacion__enlace">Conocenos</a>
+                    <a href="" class="navegacion__enlace">Iniciar Sesión</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/modernizr.js"></script>
 </body>
 </html>
