@@ -6,7 +6,7 @@ import { About } from "./components/about";
 import { Gallery } from "./components/gallery";
 import { Testimonials } from "./components/testimonials";
 import { Contact } from "./components/contact";
-import { Login } from "./components/login";
+import { Login } from "./components/login"
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
 import "./App.css";

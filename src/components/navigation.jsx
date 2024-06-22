@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useState } from 'react';
+import Login from './login';
+
 
 export const Navigation = (props) => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <nav id="menu" className="navbar navbar-default navbar-fixed-top">
+      {/* ... other navigation elements ... */}
+      <li>
+        <a href="#about" className="page-scroll" onClick={() => setIsOpen(true)}>
+          Iniciar Sesión
+        </a>
+      </li>
+      {<nav id="menu" className="navbar navbar-default navbar-fixed-top">
       <div className="container">
         <div className="navbar-header">
           <button
@@ -53,7 +63,7 @@ export const Navigation = (props) => {
               </a>
             </li>
             <li>
-              <a href="#about" className="page-scroll">
+              <a href="#login" className="page-scroll">
                 Iniciar Sesión
               </a>
             </li>
@@ -61,6 +71,10 @@ export const Navigation = (props) => {
           </ul>
         </div>
       </div>
+    </nav>}
+
+      {isOpen && <Login setIsOpen={setIsOpen} />} {/* Render Login conditionally */}
     </nav>
   );
 };
+
