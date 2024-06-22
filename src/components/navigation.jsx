@@ -52,6 +52,12 @@ export const Navigation = (props) => {
                 Contáctanos
               </a>
             </li>
+            <li>
+              <a href="#about" className="page-scroll">
+                Iniciar Sesión
+              </a>
+            </li>
+            <li></li>
           </ul>
         </div>
       </div>
