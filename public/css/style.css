@@ -18,16 +18,16 @@ h2 {
   margin: 0 0 20px;
   font-weight: 800;
   font-size: 36px;
-  color: #333;
+  color: #fff;
 }
 h3 {
   font-size: 20px;
   font-weight: 600;
-  color: #333;
+  color: #fff;
 }
 h4 {
   font-size: 18px;
-  color: #333;
+  color: #fff;
   font-weight: 600;
 }
 h5 {
@@ -43,13 +43,13 @@ p.intro {
   line-height: 24px;
 }
 a {
-  color: #608dfd;
+  color: rgb(37, 59, 128);
   font-weight: 400;
 }
 a:hover,
 a:focus {
   text-decoration: none;
-  color: #608dfd;
+  color: rgb(37, 59, 128);
 }
 ul,
 ol {
@@ -84,7 +84,7 @@ hr {
   font-family: "Raleway", sans-serif;
   font-size: 24px;
   font-weight: 700;
-  color: #333;
+  color: rgb(217, 216, 214);
   text-transform: uppercase;
 }
 #menu.navbar-default .navbar-nav > li > a {
@@ -104,7 +104,7 @@ hr {
   bottom: -1px;
   width: 0;
   height: 2px;
-  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+  background: linear-gradient(to right, rgb(0, 160, 220) 0%, rgb(37, 59, 128) 100%);
   content: "";
   transition: width 0.2s;
 }
@@ -125,7 +125,7 @@ hr {
   bottom: -1px !important;
   width: 100% !important;
   height: 2px !important;
-  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%) !important;
+  background: linear-gradient(to right, rgb(0, 160, 220) 0%, rgb(37, 59, 128) 100%) !important;
   content: "" !important;
   transition: width 0.2s !important;
 }
@@ -135,10 +135,10 @@ hr {
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
   background-color: #fff;
-  border-color: #608dfd;
+  border-color: rgb(37, 59, 128);
 }
 .navbar-default .navbar-toggle:hover > .icon-bar {
-  background-color: #608dfd;
+  background-color: rgb(37, 59, 128);
 }
 .section-title {
   margin-bottom: 70px;
@@ -152,7 +152,7 @@ hr {
 .section-title h2::after {
   position: absolute;
   content: "";
-  background: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+  background: linear-gradient(to right, rgb(0, 160, 220) 0%, rgb(37, 59, 128) 100%);
   height: 4px;
   width: 60px;
   bottom: 0;
@@ -166,8 +166,8 @@ hr {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   color: #fff;
-  background-color: #5ca9fb;
-  background-image: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+  background-color: rgb(0, 160, 220);
+  background-image: linear-gradient(to right, rgb(0, 160, 220) 0%, rgb(37, 59, 128) 100%);
   padding: 14px 34px;
   letter-spacing: 1px;
   margin: 0;
@@ -184,7 +184,7 @@ hr {
 .btn-custom.active {
   color: #fff;
   background-image: none;
-  background-color: #6372ff;
+  background-color: rgb(37, 59, 128);
 }
 .btn:active,
 .btn.active {
@@ -247,7 +247,7 @@ header .intro-text {
 }
 /* Features Section */
 #features {
-  background: #f6f6f6;
+  background: linear-gradient(to bottom, #464646 0%, #3d3d3d 100%);
 }
 #features i.fa {
   font-size: 38px;
@@ -258,13 +258,14 @@ header .intro-text {
   height: 100px;
   padding: 30px 0;
   border-radius: 50%;
-  background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+  background: linear-gradient(to right, rgb(0, 160, 220) 0%, rgb(37, 59, 128) 100%);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
 }
 
 /* About Section */
 #about {
   padding: 60px 0;
+  background: linear-gradient(to bottom, #3d3d3d 0%, #333333 100%);
 }
 #about h3 {
   font-size: 22px;
@@ -278,7 +279,7 @@ header .intro-text {
 #about h2::after {
   position: absolute;
   content: "";
-  background: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+  background: rgb(246, 134, 41);
   height: 4px;
   width: 325px;
   bottom: 0;
@@ -293,13 +294,21 @@ header .intro-text {
 #about .about-text li:before {
   content: "\f00c";
   font-family: "FontAwesome";
-  color: #5ca9fb;
+  color: rgb(0, 160, 220);
   font-size: 11px;
   font-weight: 300;
   padding-right: 8px;
 }
+#about .about-text li,
+#about .about-text p {
+  color: rgb(217, 216, 214);
+  font-size: 15px;
+  font-weight: 300;
+  padding-right: 8px;
+} 
 #about img {
-  width: 520px;
+  width: 2400px;
+  height: 400px;
   margin-top: 10px;
   background: #fff;
   border-right: 0;
@@ -313,6 +322,16 @@ header .intro-text {
 /* Portfolio Section */
 #portfolio {
   padding: 15px 0;
+  background: linear-gradient(to bottom, #333333 0%, #2e2e2e 100%);
+}
+#portfolio h2::after {
+  background: rgb(246, 134, 41);
+  height: 4px;
+  width: 155px;
+  left: 525px;
+}
+#portfolio p {
+  color: rgb(217, 216, 214);
 }
 .portfolio-item {
   margin: 1px -15px 0 -14px;
@@ -329,9 +348,9 @@ header .intro-text {
   margin: 0 auto;
   color: #fff;
   background: linear-gradient(
-    to right,
-    rgba(99, 114, 255, 0.8) 0%,
-    rgba(92, 169, 251, 0.8) 100%
+    to left,
+    rgb(37, 59, 128, 0.8) 0%,
+    rgb(0, 160, 220, 0.8) 100%
   );
   padding: 30% 0 0;
   height: 100%;
@@ -363,7 +382,16 @@ header .intro-text {
 /* Testimonials Section */
 #testimonials {
   padding: 100px 0;
-  background: #f6f6f6;
+  background: linear-gradient(to bottom, #2e2e2e 0%, #252525 100%);
+}
+#testimonials .section-title h2{
+  left: 440px;
+}
+#testimonials .section-title h2::after{
+  background: rgb(246, 134, 41);
+  height: 4px;
+  width: 250px;
+  left: 30px;
 }
 #testimonials i {
   color: #e6e6e6;
@@ -388,6 +416,7 @@ header .intro-text {
 .testimonial-content {
   position: relative;
   overflow: hidden;
+  color: rgb(217, 216, 214);
 }
 .testimonial-content p {
   margin-bottom: 0;
@@ -398,20 +427,20 @@ header .intro-text {
   margin-top: 10px;
   font-size: 15px;
   font-weight: 600;
-  color: #666;
 }
 
 /* Contact Section */
 #contact {
   padding: 100px 0 60px;
-  background: linear-gradient(to bottom, #202020 0%, #000000 100%);
-  color: rgba(255, 255, 255, 0.75);
+  background: linear-gradient(to bottom, #252525 0%, #030303 100%);
+  color: rgb(217, 216, 214, 0.75);
 }
 #contact .section-title {
   margin-bottom: 40px;
 }
 #contact .section-title p {
   font-size: 16px;
+  color: rgb(217, 216, 214);
 }
 #contact h2 {
   color: #fff;
@@ -422,9 +451,9 @@ header .intro-text {
 #contact .section-title h2::after {
   position: absolute;
   content: "";
-  background: rgba(255, 255, 255, 0.3);
+  background: rgb(246, 134, 41);
   height: 4px;
-  width: 60px;
+  width: 270px;
   bottom: 0;
   left: 30px;
 }
@@ -448,7 +477,7 @@ header .intro-text {
   border: 2px solid #fff;
 }
 #contact .btn-custom:hover {
-  color: #1f386e;
+  color: rgb(246, 134, 41);
   background: #fff;
 }
 label {
@@ -504,7 +533,7 @@ label {
   margin-right: 10px;
 }
 #contact .social {
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid rgb(217, 216, 214, 0.15);
   padding-top: 50px;
   margin-top: 50px;
   text-align: center;
@@ -530,7 +559,7 @@ label {
 
 /* Footer Section*/
 #footer {
-  background: #f6f6f6;
+  background: #000000;
   padding: 30px 0;
 }
 #footer p {
@@ -538,10 +567,10 @@ label {
   font-size: 14px;
 }
 #footer a {
-  color: #608dfd;
+  color: rgb(37, 59, 128);
 }
 #footer a:hover {
-  border-bottom: 2px solid #608dfd;
+  border-bottom: 2px solid rgb(37, 59, 128);
 }
 
 @media (max-width: 768px) {
