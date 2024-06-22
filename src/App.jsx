@@ -32,7 +32,6 @@ const App = () => {
       <Gallery data={landingPageData.Gallery} />
       <Testimonials data={landingPageData.Testimonials} />
       <Contact data={landingPageData.Contact} />
-     
     </div>
   );
 };
