@@ -19,7 +19,6 @@ export const scroll = new SmoothScroll('a[href*="#"]', {
 
 const App = () => {
   const [landingPageData, setLandingPageData] = useState({});
-  const [user, setUser] = React.useState(null);
   useEffect(() => {
     setLandingPageData(JsonData);
   }, []);
@@ -35,7 +34,6 @@ const App = () => {
       <Gallery data={landingPageData.Gallery} />
       <Testimonials data={landingPageData.Testimonials} />
       <Contact data={landingPageData.Contact} />
-      <>{user ? < Header /> : <Login setUser={setUser} />}</>
     </div>
   );
 };
