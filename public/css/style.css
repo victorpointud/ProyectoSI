@@ -256,6 +256,7 @@ header .intro-text {
 
 /* Features Section */
 #features {
+  padding: 60px 0;
   background: linear-gradient(to bottom, #464646 0%, #3d3d3d 100%);
 }
 #features i.fa {
@@ -273,7 +274,7 @@ header .intro-text {
 
 /* About Section */
 #about {
-  padding: 60px 0;
+  padding: 50px 0;
   background: linear-gradient(to bottom, #3d3d3d 0%, #333333 100%);
 }
 #about h3 {
@@ -440,7 +441,7 @@ header .intro-text {
 
 /* Contact Section */
 #contact {
-  padding: 100px 0 60px;
+  padding: 0px 0 0px;
   background: linear-gradient(to bottom, #252525 0%, #030303 100%);
   color: rgb(217, 216, 214, 0.75);
 }

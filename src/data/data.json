@@ -9,12 +9,12 @@
     "Why": [
       "Tienda Oficial.",
       "Mercancía Sponsorizada.",
-      "Las mejores bebidas de la Unimet."
+      "Las Mejores Bebidas"
     ],
     "Why2": [
       "Zona de descanso.",
       "Entretimiento.",
-      "Atención de calidad."
+      "Atención de Calidad."
     ]
   },
 
@@ -75,17 +75,17 @@
 
   "Features": [
     {
-      "icon": "fa fa-comments-o",
+      "icon": "fa fa-coffee",
       "title": "Café",
       "text": "Guayoyo, Oscuro, Frío, Con leche, Capuccino..."
     },
     {
-      "icon": "fa fa-bullhorn",
+      "icon": "fa fa-glass",
       "title": "Merengada",
       "text": "Chocolate, Dulce de Leche, Oreo, Fresa, Pirulin..."
     },
     {
-      "icon": "fa fa-group",
+      "icon": "fa fa-beer",
       "title": "Refrescos",
       "text": "Coca-Cola, 7UP, Pepsi, Frescolita..."
     },
