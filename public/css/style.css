@@ -245,6 +245,15 @@ header .intro-text {
   padding-bottom: 200px;
   text-align: center;
 }
+
+/* Login Section*/
+
+#login {
+  padding: 10px 0;
+  background: linear-gradient(to bottom, #252525 0%, #2e2e2e 100%);
+}
+
+
 /* Features Section */
 #features {
   background: linear-gradient(to bottom, #464646 0%, #3d3d3d 100%);

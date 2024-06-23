@@ -12,22 +12,17 @@ export const Login = (props) => {
   const [{ name, email, carnet }, setState] = useState(initialState);
   const [isOpen, setIsOpen] = useState(false);
 
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setState((prevState) => ({ ...prevState, [name]: value }));
   };
+
   const clearState = () => setState({ ...initialState });
-  
-  const handleClose = () => {
-    setIsOpen(false); // Call the prop to update parent state (Navigation)
-  };
-  const [isOpenLocal, setIsOpenLocal] = useState(false); 
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(name, email, carnet);
-    
+
     emailjs
       .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_PUBLIC_KEY")
       .then(
@@ -40,19 +35,17 @@ export const Login = (props) => {
         }
       );
   };
+
   return (
     <div>
-      <div className={isOpen ? 'login-popup active' : 'login-popup'}> {/* Use isOpen prop for visibility */}
-        {/* ... pop-up content (form, title, etc.) ... */}
-        <button onClick={() => { setIsOpen(false); setIsOpenLocal(false); }}>Cerrar</button> {/* Update both isOpen and isOpenLocal (optional) */}
-      </div>
-      {isOpen && (  // Only render the pop-up when isOpen is true
+      <header>
+        <button onClick={() => setIsOpen(true)}>Iniciar Sesión</button>
+      </header>
+      {isOpen && (
         <div className="login-popup">
           <div className="popup-content">
+            <button onClick={() => setIsOpen(false)}>Cerrar</button>
             <h2>Iniciar Sesión</h2>
-            <p>Inicie sesión para acceder a todas las opciones</p>
-  
-            {/* Place your original login form code here */}
             <div className="container">
               <div className="col-md-8">
                 <div className="row">
@@ -111,12 +104,9 @@ export const Login = (props) => {
                 </div>
               </div>
             </div>
-  
-            <button onClick={() => setIsOpen(false)}>Cerrar</button>
           </div>
         </div>
       )}
-      <button onClick={() => setIsOpen(true)}>Iniciar Sesión</button>
     </div>
   );
 };
