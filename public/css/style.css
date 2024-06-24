@@ -385,7 +385,7 @@ a:focus,
 #features h2::after{
   position: absolute;
   content: "";
-  backgroundrgb(220, 139, 0);
+  background:rgb(220, 139, 0);
   height: 4px;
   width: 230px;
   left: 487px;
