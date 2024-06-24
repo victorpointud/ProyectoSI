@@ -2,24 +2,36 @@ import React from "react";
 
 export const Features = (props) => {
   return (
-    <div id="features" className="text-center">
+    
+    <div id="features">
       <div className="container">
-        <div className="col-md-10 col-md-offset-1 section-title">
+        <div className="section-title">
           <h2>Productos</h2>
         </div>
         <div className="row">
           {props.data
             ? props.data.map((d, i) => (
-                <div key={`${d.title}-${i}`} className="col-xs-6 col-md-3">
-                  {" "}
-                  <i className={d.icon}></i>
-                  <h3>{d.title}</h3>
-                  <p>{d.text}</p>
+                <div key={`${d.text}-${i}`} className="col-md-2">
+                  <div className="features">
+                    <div className="features-image">
+                      {" "}
+                      <img src={d.img} alt="" />{" "}
+                    </div>
+                    <div className="features-content">
+                      <p>"{d.name}"</p>
+                      <div className="features-meta"> - {d.text} </div>
+                    </div>
+                  </div>
                 </div>
               ))
-            : "Loading..."}
+            : "loading"}
         </div>
       </div>
+      <button className="btn 1"> Comprar </button>
+      <button className="btn 2"> Comprar </button>
+      <button className="btn 3"> Comprar </button>
+      <button className="btn 4"> Comprar </button>
     </div>
+    
   );
 };
