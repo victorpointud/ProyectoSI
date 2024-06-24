@@ -339,7 +339,7 @@ button:focus {
   background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(255, 167, 15) 200px);
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.445);
   margin: 12px;
-  
+  margin-bottom: 50px;
 }
 
 #features h2 {
@@ -358,10 +358,13 @@ button:focus {
   left: 487px;
 }
 
-#features .about-text text{
-  color: #fff;
-  font-size: 105px;
+.features-content {
+  position: relative;
+  overflow: hidden;
+  left: 20px;
+  color: rgb(255, 255, 255);
 }
+
 #features button {
   position: relative;
   font-family: "Raleway", sans-serif;
@@ -539,7 +542,7 @@ button:focus {
 .testimonial-content {
   position: relative;
   overflow: hidden;
-  color: rgb(217, 216, 214);
+  color: rgb(255, 255, 255);
 }
 .testimonial-content p {
   margin-bottom: 0;

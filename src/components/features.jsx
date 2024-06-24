@@ -18,7 +18,7 @@ export const Features = (props) => {
                       <img src={d.img} alt="" />{" "}
                     </div>
                     <div className="features-content">
-                      <p>"{d.name}"</p>
+                      <p>{d.name}</p>
                       <div className="features-meta"> - {d.text} </div>
                     </div>
                   </div>

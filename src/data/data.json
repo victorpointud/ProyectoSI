@@ -75,23 +75,19 @@
 
   "Features": [
     {
-      "img": "img/features/01.png",
-      "name": "Café",
+      "img": "img/features/04.jpg",
       "text": "Guayoyo, Oscuro, Frío, Con leche, Capuccino..."
     },
     {
-      "img": "img/features/02.webp",
-      "name": "Merengada",
+      "img": "img/features/01.png",
       "text": "Chocolate, Dulce de Leche, Oreo, Fresa, Pirulin..."
     },
     {
-      "img": "img/features/03.png",
-      "name": "Refrescos",
+      "img": "img/features/02.webp",
       "text": "Coca-Cola, 7UP, Pepsi, Frescolita..."
     },
     {
-      "img": "img/features/04.png",
-      "name": "Energéticas",
+      "img": "img/features/03.png",
       "text": "Monster, Red Bull, Celsius, Furia..."
     }
   ]
