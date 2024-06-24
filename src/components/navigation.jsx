@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Login } from './login';
 import { Profile } from './profile';
+import { ChangePassword } from './changePassword';
 import { auth } from './firebase';
 
 const scrollToSection = (id) => {
@@ -13,6 +14,7 @@ const scrollToSection = (id) => {
 export const Navigation = ({ user, setUser }) => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const [isChangePasswordOpen, setIsChangePasswordOpen] = useState(false);
 
   const toggleLoginPopup = () => {
     setIsLoginOpen(!isLoginOpen);
@@ -70,7 +72,8 @@ export const Navigation = ({ user, setUser }) => {
         </div>
       </div>
       {isLoginOpen && <Login setIsOpen={setIsLoginOpen} setUser={setUser} />}
-      {isProfileOpen && <Profile user={user} setUser={setUser} setIsOpen={setIsProfileOpen} />}
+      {isProfileOpen && <Profile user={user} setUser={setUser} setProfileOpen={setIsProfileOpen} setChangePasswordOpen={setIsChangePasswordOpen} />}
+      {isChangePasswordOpen && <ChangePassword user={user} setIsOpen={setIsChangePasswordOpen} />}
     </nav>
   );
 };

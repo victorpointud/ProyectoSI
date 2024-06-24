@@ -787,6 +787,7 @@ label {
   border: none;
   font-size: 20px;
   cursor: pointer;
+  color: black; 
 }
 
 #profile-popup h1 {
@@ -855,7 +856,7 @@ a:focus,
   align-items: center;
   height: 50vh;
   margin: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgb(220, 139, 0);
 }
 
 #change-password-popup .change-password-content {
@@ -877,6 +878,7 @@ a:focus,
   border: none;
   font-size: 20px;
   cursor: pointer;
+  color: black; 
 }
 
 #change-password-popup h1 {
