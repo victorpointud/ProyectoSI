@@ -13,17 +13,14 @@ export const ChangePassword = ({ user, setIsOpen }) => {
 
     reauthenticateWithCredential(user, credential)
       .then(() => {
-        updatePassword(user, newPassword)
-          .then(() => {
-            setMessage('Contraseña cambiada exitosamente');
-            setIsOpen(false);
-          })
-          .catch((error) => {
-            setMessage('Error al cambiar la contraseña: ' + error.message);
-          });
+        return updatePassword(user, newPassword);
+      })
+      .then(() => {
+        setMessage('Contraseña cambiada exitosamente');
+        setIsOpen(false);
       })
       .catch((error) => {
-        setMessage('Error al autenticar: ' + error.message);
+        setMessage('Error: ' + error.message);
       });
   };
 

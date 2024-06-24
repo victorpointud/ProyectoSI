@@ -24,6 +24,15 @@ export const Navigation = ({ user, setUser }) => {
     setIsProfileOpen(!isProfileOpen);
   };
 
+  const handleLogout = () => {
+    auth.signOut().then(() => {
+      setUser(null);
+      setIsProfileOpen(false); // Close profile popup if open
+    }).catch((error) => {
+      console.error("Error al cerrar sesión:", error);
+    });
+  };
+
   return (
     <nav id="menu" className="navbar navbar-default navbar-fixed-top">
       <div className="container">
