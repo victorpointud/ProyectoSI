@@ -1,22 +1,30 @@
 import React, { useState } from 'react';
-import { auth } from './firebase';
+import { auth } from './firebase'; // Importa la configuración de Firebase
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from "firebase/auth";
 
 export const Login = ({ setIsOpen }) => {
   const [isRegister, setIsRegister] = useState(false);
+  const [message, setMessage] = useState('');
 
   const login = (email, password) => {
-    auth.signInWithEmailAndPassword(email, password)
+    signInWithEmailAndPassword(auth, email, password)
       .then(({ user }) => {
-        console.log("Sesión iniciada con:", user);
-        setIsOpen(false); 
+        setMessage('Inicio de sesión exitoso');
+        setIsOpen(false); // Cierra el pop-up después del inicio de sesión
+      })
+      .catch(error => {
+        setMessage('Error al iniciar sesión: ' + error.message);
       });
   };
 
   const createUser = (email, password) => {
-    auth.createUserWithEmailAndPassword(email, password)
+    createUserWithEmailAndPassword(auth, email, password)
       .then(({ user }) => {
-        console.log("Usuario registrado:", user);
-        setIsOpen(false); 
+        setMessage('Registro exitoso');
+        setIsOpen(false); // Cierra el pop-up después del registro
+      })
+      .catch(error => {
+        setMessage('Error al registrarse: ' + error.message);
       });
   };
 
@@ -46,10 +54,11 @@ export const Login = ({ setIsOpen }) => {
             {isRegister ? "Iniciar sesión" : "Registrarse"}
           </button>
           <button type="button" onClick={() => {
-            auth.signOut();
+            signOut(auth);
             setIsOpen(false);
           }}>Cerrar sesión</button>
         </form>
+        {message && <p>{message}</p>}
       </div>
     </div>
   );

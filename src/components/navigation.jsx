@@ -25,12 +25,13 @@ export const Navigation = (props) => {
             <span className="icon-bar"></span>
             <span className="icon-bar"></span>
           </button>
-          <a className="navbar-brand page-scroll" href="#page-top">
-            <img src="img/unimet/logo.png" alt="Unimet Store" style={{ height: '40px' }} />
-          </a>
-          <span className="navbar-title" style={{ marginLeft: '10px', fontSize: '18px', fontWeight: 'bold' }}>
-            Unimet Store / Identity & Coffee Bar
-          </span>
+          <div className="navbar-brand-container">
+              <a className="navbar-brand page-scroll" href="#page-top">
+              <img src="img/unimet/logo.png" alt="Logo" className="navbar-logo" />
+              </a>
+              <a className="navbar-text page-scroll" href="#page-top"> Unimet Store / Identity & Coffee Bar
+              </a>
+          </div>
         </div>
         <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul className="nav navbar-nav navbar-right">

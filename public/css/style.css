@@ -75,30 +75,25 @@ hr {
 /* Navigation */
 #menu {
   padding: 15px;
-  transition: all 0.8s;
+  transition: all 0.5s;
 }
 
-.navbar-logo {
-  height: 40px; /* Ajusta la altura según tus necesidades */
-  margin-right: 10px; /* Espaciado entre el logo y el título */
+#menu .navbar-logo {
+  position: relative;
+  height: 120px; 
+  margin-right: 10px;
+  margin-bottom: 100px;
 }
 
-.navbar-title {
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 18px; /* Ajusta el tamaño de la fuente según tus necesidades */
-  font-weight: bold; /* Ajusta el peso de la fuente según tus necesidades */
-  color: #333; /* Ajusta el color según tus necesidades */
-}
-
-/* Asegúrate de que el contenedor del header navbar alinee el logo y el título correctamente */
-.navbar-header {
-  display: flex;
-  align-items: center;
+#menu .navbar-text {
+  position: relative;
+  font-size: 30px;
+  font-weight: bolder;
+  color: #ffffff;
 }
 
 #menu.navbar-default {
-  background: linear-gradient(to bottom, #e69c08 0%, #d68410 100%);
+  background-color: #e59408;
   border-color: rgba(255, 255, 255, 0);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
 }
@@ -278,7 +273,7 @@ header .intro-text {
   align-items: center;
   height: 50vh;
   margin: 0;
-  background-color: #464545;
+  background-color: #e59408;
 }
 
 #login-popup h1 {
