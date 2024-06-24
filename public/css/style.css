@@ -261,7 +261,7 @@ header .intro-text {
 #login h1 {
   color: #000000;
   margin-bottom: 20px;
-  align-items: center;
+  text-align: center;
 }
 
 #login .toggle-button{
