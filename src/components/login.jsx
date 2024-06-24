@@ -51,7 +51,7 @@ export const Login = (props) => {
         <input type="email" id="emailField" />
         <label htmlFor="passwordField"> Contraseña </label>
         <input type="password" id="passwordField" />
-        <button type="submit">
+        <button class = "Register" type="submit">
           {" "}
           {isRegister ? "Regístrate" : "Inicia sesión"}{" "}
         </button>

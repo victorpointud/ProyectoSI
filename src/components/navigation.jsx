@@ -6,7 +6,6 @@ export const Navigation = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <nav id="menu" className="navbar navbar-default navbar-fixed-top">
-      {/* ... other navigation elements ... */}
       <li>
         <a href="#about" className="page-scroll" onClick={() => setIsOpen(true)}>
           Iniciar Sesión
@@ -67,7 +66,6 @@ export const Navigation = (props) => {
                 Iniciar Sesión
               </a>
             </li>
-            <li></li>
           </ul>
         </div>
       </div>
