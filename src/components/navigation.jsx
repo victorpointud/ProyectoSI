@@ -27,7 +27,7 @@ export const Navigation = ({ user, setUser }) => {
   const handleLogout = () => {
     auth.signOut().then(() => {
       setUser(null);
-      setIsProfileOpen(false); // Close profile popup if open
+      setIsProfileOpen(false);
     }).catch((error) => {
       console.error("Error al cerrar sesión:", error);
     });
