@@ -6,8 +6,7 @@ import { About } from "./components/about";
 import { Gallery } from "./components/gallery";
 import { Testimonials } from "./components/testimonials";
 import { Contact } from "./components/contact";
-import { Login } from "./components/login"
-import  "./components/firebase";
+import { auth } from "./components/firebase";
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
 import "./App.css";
@@ -19,15 +18,25 @@ export const scroll = new SmoothScroll('a[href*="#"]', {
 
 const App = () => {
   const [landingPageData, setLandingPageData] = useState({});
+  const [user, setUser] = useState(null);
+
   useEffect(() => {
     setLandingPageData(JsonData);
-    
+
+    const unsubscribe = auth.onAuthStateChanged(user => {
+      if (user) {
+        setUser(user);
+      } else {
+        setUser(null);
+      }
+    });
+
+    return () => unsubscribe();
   }, []);
-  
 
   return (
     <div>
-      <Navigation />
+      <Navigation user={user} setUser={setUser} />
       <Header data={landingPageData.Header} />
       <Features data={landingPageData.Features} />
       <About data={landingPageData.About} />

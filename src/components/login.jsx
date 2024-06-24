@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { auth } from './firebase';
-import { signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from "firebase/auth";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword, updateProfile, signOut } from "firebase/auth";
 
-export const Login = ({ setIsOpen }) => {
+export const Login = ({ setIsOpen, setUser }) => {
   const [isRegister, setIsRegister] = useState(false);
   const [message, setMessage] = useState('');
 
@@ -10,6 +10,7 @@ export const Login = ({ setIsOpen }) => {
     signInWithEmailAndPassword(auth, email, password)
       .then(({ user }) => {
         setMessage('Inicio de sesión exitoso');
+        setUser({ ...user, password });
         setIsOpen(false);
       })
       .catch(error => {
@@ -17,11 +18,18 @@ export const Login = ({ setIsOpen }) => {
       });
   };
 
-  const createUser = (email, password, user) => {
+  const createUser = (email, password, username) => {
     createUserWithEmailAndPassword(auth, email, password)
       .then(({ user }) => {
-        setMessage('Registro exitoso');
-        setIsOpen(false);
+        updateProfile(user, {
+          displayName: username
+        }).then(() => {
+          setMessage('Registro exitoso');
+          setUser({ ...user, displayName: username, password });
+          setIsOpen(false);
+        }).catch(error => {
+          setMessage('Error al actualizar el perfil: ' + error.message);
+        });
       })
       .catch(error => {
         setMessage('Error al registrarse: ' + error.message);
@@ -32,10 +40,10 @@ export const Login = ({ setIsOpen }) => {
     e.preventDefault();
     const email = e.target.emailField.value;
     const password = e.target.passwordField.value;
-    const user = e.target.userField ? e.target.userField.value : null;
+    const username = e.target.userField ? e.target.userField.value : null;
 
     if (isRegister) {
-      createUser(email, password, user);
+      createUser(email, password, username);
     } else {
       login(email, password);
     }
@@ -57,7 +65,7 @@ export const Login = ({ setIsOpen }) => {
           <input type="email" id="emailField" name="emailField" required />
           <label htmlFor="passwordField">Contraseña</label>
           <input type="password" id="passwordField" name="passwordField" required />
-          {message && isRegister && <p>{message}</p>}
+          {message && <p>{message}</p>}
           <button type="submit">{isRegister ? "Regístrate" : "Inicia sesión"}</button>
           <button className="toggle-button" type="button" onClick={() => {
             setIsRegister(!isRegister);

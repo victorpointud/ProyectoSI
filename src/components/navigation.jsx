@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import {Login} from './login';
+import { Login } from './login';
+import { Profile } from './profile';
+import { auth } from './firebase';
 
 const scrollToSection = (id) => {
   const element = document.getElementById(id);
@@ -8,11 +10,16 @@ const scrollToSection = (id) => {
   }
 };
 
-export const Navigation = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
+export const Navigation = ({ user, setUser }) => {
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
 
-  const togglePopup = () => {
-    setIsOpen(!isOpen);
+  const toggleLoginPopup = () => {
+    setIsLoginOpen(!isLoginOpen);
+  };
+
+  const toggleProfilePopup = () => {
+    setIsProfileOpen(!isProfileOpen);
   };
 
   return (
@@ -26,11 +33,11 @@ export const Navigation = (props) => {
             <span className="icon-bar"></span>
           </button>
           <div className="navbar-brand-container">
-              <a className="navbar-brand page-scroll" href="#page-top">
+            <a className="navbar-brand page-scroll" href="#page-top">
               <img src="img/unimet/logo.png" alt="Logo" className="navbar-logo" />
-              </a>
-              <a className="navbar-text page-scroll" href="#page-top"> Unimet Store / Identity & Coffee Bar
-              </a>
+            </a>
+            <a className="navbar-text page-scroll" href="#page-top"> Unimet Store / Identity & Coffee Bar
+            </a>
           </div>
         </div>
         <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -50,13 +57,20 @@ export const Navigation = (props) => {
             <li>
               <a href="#contact" className="page-scroll" onClick={() => scrollToSection('contact')}>Contáctanos</a>
             </li>
-            <li>
-              <a onClick={togglePopup} className="page-scroll">Iniciar Sesión</a>
-            </li>
+            {user ? (
+              <li>
+                <a className="page-scroll" onClick={toggleProfilePopup}>Perfil</a>
+              </li>
+            ) : (
+              <li>
+                <a onClick={toggleLoginPopup} className="page-scroll">Iniciar Sesión</a>
+              </li>
+            )}
           </ul>
         </div>
       </div>
-      {isOpen && <Login setIsOpen={setIsOpen} />}
+      {isLoginOpen && <Login setIsOpen={setIsLoginOpen} setUser={setUser} />}
+      {isProfileOpen && <Profile user={user} setUser={setUser} setIsOpen={setIsProfileOpen} />}
     </nav>
   );
 };
