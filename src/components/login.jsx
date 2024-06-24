@@ -1,26 +1,22 @@
-import React from "react";
-import {app} from "./firebase";
+import React, { useState } from 'react';
+import { auth } from './firebase';
 
-export const Login = (props) => {
-  const [isRegister, setIsRegister] = React.useState(false);
+export const Login = ({ setIsOpen }) => {
+  const [isRegister, setIsRegister] = useState(false);
 
-  const createUser = (email, password) => {
-    app
-      .auth()
-      .createUserWithEmailAndPassword(email, password)
-      .then((firebaseUser) => {
-        console.log("Usuario creado:", firebaseUser);
-        props.setUser(firebaseUser);
+  const login = (email, password) => {
+    auth.signInWithEmailAndPassword(email, password)
+      .then(({ user }) => {
+        console.log("Sesión iniciada con:", user);
+        setIsOpen(false); 
       });
   };
 
-  const login = (email, password) => {
-    app
-      .auth()
-      .signInWithEmailAndPassword(email, password)
-      .then((firebaseUser) => {
-        console.log("Sesión iniciada con:", firebaseUser.user);
-        props.setUser(firebaseUser);
+  const createUser = (email, password) => {
+    auth.createUserWithEmailAndPassword(email, password)
+      .then(({ user }) => {
+        console.log("Usuario registrado:", user);
+        setIsOpen(false); 
       });
   };
 
@@ -28,39 +24,33 @@ export const Login = (props) => {
     e.preventDefault();
     const email = e.target.emailField.value;
     const password = e.target.passwordField.value;
-
     if (isRegister) {
       createUser(email, password);
-    }
-
-    if (!isRegister) {
+    } else {
       login(email, password);
     }
   };
 
-  const logOut = () => {
-    app.auth().signOut();
-  };
-
-  
   return (
-    <div id="login">
+    <div id="login-popup">
+      <div className="login-content">
+        <button className="close" onClick={() => setIsOpen(false)}>×</button>
         <form onSubmit={submitHandler}>
-            <h1>{isRegister ? "Regístrate" : "Inicia sesión"}</h1>
-            <label htmlFor="emailField">Email</label>
-            <input type="email" id="emailField" name="emailField" required />
-            <label htmlFor="passwordField">Contraseña</label>
-            <input type="password" id="passwordField" name="passwordField" required />
-            <button type="submit">{isRegister ? "Regístrate" : "Inicia sesión"}
-            </button>
-            <button className="toggle-button" onClick={() => setIsRegister(!isRegister)}>
-                {isRegister ? "Iniciar sesión" : "Registrarse"}
-            </button>
-            <button onClick={logOut}>Cerrar sesión</button>
+          <h1>{isRegister ? "Regístrate" : "Inicia sesión"}</h1>
+          <label htmlFor="emailField">Email</label>
+          <input type="email" id="emailField" name="emailField" required />
+          <label htmlFor="passwordField">Contraseña</label>
+          <input type="password" id="passwordField" name="passwordField" required />
+          <button type="submit">{isRegister ? "Regístrate" : "Inicia sesión"}</button>
+          <button className="toggle-button" type="button" onClick={() => setIsRegister(!isRegister)}>
+            {isRegister ? "Iniciar sesión" : "Registrarse"}
+          </button>
+          <button type="button" onClick={() => {
+            auth.signOut();
+            setIsOpen(false);
+          }}>Cerrar sesión</button>
         </form>
+      </div>
     </div>
-);
+  );
 };
-  
-
-export default Login;
