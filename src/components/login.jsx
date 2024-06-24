@@ -44,26 +44,21 @@ export const Login = (props) => {
 
   
   return (
-    <div>
-      <h1> {isRegister ? "Regístrate" : "Inicia sesión"}</h1>
-      <form onSubmit={submitHandler}>
-        <label htmlFor="emailField"> Email </label>
-        <input type="email" id="emailField" />
-        <label htmlFor="passwordField"> Contraseña </label>
-        <input type="password" id="passwordField" />
-        <button class = "Register" type="submit">
-          {" "}
-          {isRegister ? "Regístrate" : "Inicia sesión"}{" "}
-        </button>
-      </form>
-      <button onClick={() => setIsRegister(!isRegister)}>
-        {isRegister
-          ? "Iniciar sesión"
-          : "Registrarse"}
-      </button>
-      <button onClick={logOut}>Cerrar Sesión</button>
+    <div id="login">
+        <form onSubmit={submitHandler}>
+            <h1>{isRegister ? "Regístrate" : "Inicia sesión"}</h1>
+            <label htmlFor="emailField">Email</label>
+            <input type="email" id="emailField" name="emailField" required />
+            <label htmlFor="passwordField">Contraseña</label>
+            <input type="password" id="passwordField" name="passwordField" required />
+            <button type="submit">{isRegister ? "Regístrate" : "Inicia sesión"}</button>
+            <button className="toggle-button" onClick={() => setIsRegister(!isRegister)}>
+                {isRegister ? "Iniciar sesión" : "Registrarse"}
+            </button>
+            <button onClick={logOut}>Cerrar sesión</button>
+        </form>
     </div>
-  );
+);
 };
   
 
