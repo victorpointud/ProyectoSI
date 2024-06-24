@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { auth } from './firebase';
-import { signInWithEmailAndPassword, createUserWithEmailAndPassword, updateProfile, signOut } from "firebase/auth";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from "firebase/auth";
 
 export const Login = ({ setIsOpen, setUser }) => {
   const [isRegister, setIsRegister] = useState(false);
@@ -10,7 +10,7 @@ export const Login = ({ setIsOpen, setUser }) => {
     signInWithEmailAndPassword(auth, email, password)
       .then(({ user }) => {
         setMessage('Inicio de sesión exitoso');
-        setUser({ ...user, password });
+        setUser({ ...user });
         setIsOpen(false);
       })
       .catch(error => {
@@ -18,18 +18,12 @@ export const Login = ({ setIsOpen, setUser }) => {
       });
   };
 
-  const createUser = (email, password, username) => {
+  const createUser = (email, password) => {
     createUserWithEmailAndPassword(auth, email, password)
       .then(({ user }) => {
-        updateProfile(user, {
-          displayName: username
-        }).then(() => {
-          setMessage('Registro exitoso');
-          setUser({ ...user, displayName: username, password });
-          setIsOpen(false);
-        }).catch(error => {
-          setMessage('Error al actualizar el perfil: ' + error.message);
-        });
+        setMessage('Registro exitoso');
+        setUser({ ...user });
+        setIsOpen(false);
       })
       .catch(error => {
         setMessage('Error al registrarse: ' + error.message);
@@ -40,10 +34,9 @@ export const Login = ({ setIsOpen, setUser }) => {
     e.preventDefault();
     const email = e.target.emailField.value;
     const password = e.target.passwordField.value;
-    const username = e.target.userField ? e.target.userField.value : null;
 
     if (isRegister) {
-      createUser(email, password, username);
+      createUser(email, password);
     } else {
       login(email, password);
     }
@@ -55,12 +48,6 @@ export const Login = ({ setIsOpen, setUser }) => {
         <button className="close" onClick={() => setIsOpen(false)}>×</button>
         <form onSubmit={submitHandler}>
           <h1>{isRegister ? "Regístrate" : "Inicia sesión"}</h1>
-          {isRegister && (
-            <>
-              <label htmlFor="userField">Usuario</label>
-              <input type="text" id="userField" name="userField" required />
-            </>
-          )}
           <label htmlFor="emailField">Email</label>
           <input type="email" id="emailField" name="emailField" required />
           <label htmlFor="passwordField">Contraseña</label>
