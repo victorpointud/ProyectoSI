@@ -11,7 +11,7 @@ export const Features = (props) => {
         <div className="row">
           {props.data
             ? props.data.map((d, i) => (
-                <div key={`${d.text}-${i}`} className="col-md-2">
+                <div key={`${d.text}-${i}`} className="col-md-3">
                   <div className="features">
                     <div className="features-image">
                       {" "}
@@ -26,6 +26,7 @@ export const Features = (props) => {
               ))
             : "loading"}
         </div>
+      
       </div>
       <button className="btn 1"> Comprar </button>
       <button className="btn 2"> Comprar </button>

@@ -71,7 +71,7 @@ export const Navigation = (props) => {
       </div>
     </nav>}
 
-      {isOpen && <Login setIsOpen={setIsOpen} />} {/* Render Login conditionally */}
+      {isOpen && <Login setIsOpen={setIsOpen} />} 
     </nav>
   );
 };

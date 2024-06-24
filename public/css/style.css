@@ -329,23 +329,24 @@ button:focus {
   padding: 60px 0;
   background: linear-gradient(to bottom, #464646 0%, #3d3d3d 100%);
 }
-#features i.fa {
-  font-size: 38px;
-  margin-bottom: 20px;
-  transition: all 0.5s;
+#features img {
+  margin-bottom: 40px;
   color: #fff;
-  width: 100px;
-  height: 100px;
-  padding: 30px 0;
-  border-radius: 50%;
-  background: linear-gradient(to right, rgb(0, 160, 220) 0%, rgb(37, 59, 128) 100%);
-  box-shadow: 10px 10px 10px rgba(99, 39, 39, 0.05);
+  width: 200px;
+  height: 220px;
+  padding: 20px 0 10;
+  border-radius: 400%;
+  background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(255, 167, 15) 200px);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.445);
+  margin: 12px;
+  
 }
 
 #features h2 {
   position: relative;
   margin-bottom: 10px;
   padding-bottom: 15px;
+  text-align: center;
 
 }
 #features h2::after{
@@ -354,7 +355,34 @@ button:focus {
   background: rgb(246, 134, 41);
   height: 4px;
   width: 230px;
-  left: 375px;
+  left: 487px;
+}
+
+#features .about-text text{
+  color: #fff;
+  font-size: 105px;
+}
+#features button {
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: rgb(239, 153, 5);
+  padding: 14px 34px;
+  letter-spacing: 1px;
+  left: 120px;
+  top: 40px;
+  margin-left: 120px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 25px;
+  border: 30;
+  border-color: white;
+}
+
+#features button:hover {
+  color: rgb(0, 0, 0);
+  background:#f8950a;
 }
 
 /* About Section */
@@ -396,7 +424,7 @@ button:focus {
 }
 #about .about-text li,
 #about .about-text p {
-  color: rgb(217, 216, 214);
+  color: rgb(255, 255, 255);
   font-size: 15px;
   font-weight: 300;
   padding-right: 8px;
