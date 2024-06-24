@@ -8,7 +8,7 @@ export const Profile = ({ user, setUser, setProfileOpen, setChangePasswordOpen }
   const handleLogout = () => {
     signOut(auth).then(() => {
       setUser(null);
-      setProfileOpen(false); // Close profile popup if open
+      setProfileOpen(false);
     }).catch((error) => {
       console.error("Error al cerrar sesión:", error);
     });
