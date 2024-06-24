@@ -12,6 +12,7 @@ export const Navigation = (props) => {
         </a>
       </li>
       {<nav id="menu" className="navbar navbar-default navbar-fixed-top">
+        <img src="img/unimet/logo.png" alt="Logo" className="navbar-logo" />
       <div className="container">
         <div className="navbar-header">
           <button
@@ -26,9 +27,12 @@ export const Navigation = (props) => {
             <span className="icon-bar"></span>{" "}
             <span className="icon-bar"></span>{" "}
           </button>
+          
           <a className="navbar-brand page-scroll" href="#page-top">
+          
           Unimet Store / Identity & Coffee Bar
           </a>{" "}
+          
         </div>
 
         <div

@@ -9,8 +9,7 @@ export const Features = (props) => {
           <h2>Productos</h2>
         </div>
         <div className="row">
-          {props.data
-            ? props.data.map((d, i) => (
+          {props.data? props.data.map((d, i) => (
                 <div key={`${d.text}-${i}`} className="col-md-3">
                   <div className="features">
                     <div className="features-image">
@@ -18,21 +17,19 @@ export const Features = (props) => {
                       <img src={d.img} alt="" />{" "}
                     </div>
                     <div className="features-content">
-                      <p>{d.name}</p>
-                      <div className="features-meta"> - {d.text} </div>
+                    <h3 className="features-name">{d.name}</h3>
+                    <p className="features-meta">{d.text}</p>
                     </div>
                   </div>
                 </div>
               ))
-            : "loading"}
+            : "loading"}     
         </div>
-      
       </div>
       <button className="btn 1"> Comprar </button>
       <button className="btn 2"> Comprar </button>
       <button className="btn 3"> Comprar </button>
       <button className="btn 4"> Comprar </button>
     </div>
-    
   );
 };
