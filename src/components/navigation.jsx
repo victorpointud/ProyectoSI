@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Login } from './login';
 import { Profile } from './profile';
 import { ChangePassword } from './changePassword';
-import { auth } from './firebase';
 
 const scrollToSection = (id) => {
   const element = document.getElementById(id);
@@ -22,15 +21,6 @@ export const Navigation = ({ user, setUser }) => {
 
   const toggleProfilePopup = () => {
     setIsProfileOpen(!isProfileOpen);
-  };
-
-  const handleLogout = () => {
-    auth.signOut().then(() => {
-      setUser(null);
-      setIsProfileOpen(false);
-    }).catch((error) => {
-      console.error("Error al cerrar sesión:", error);
-    });
   };
 
   return (
