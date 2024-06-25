@@ -418,7 +418,7 @@ a:focus,
 
 /* Features Section */
 #features {
-  padding: 100px 0;
+  padding: 10px 0;
   background: linear-gradient(to bottom, #3d3d3d 0%, #252525 100%);
 }
 
@@ -437,7 +437,6 @@ a:focus,
 
 #features h2 {
   position: relative;
-  margin-bottom: 10px;
   padding-bottom: 15px;
   text-align: center;
 
