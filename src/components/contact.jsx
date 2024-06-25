@@ -17,10 +17,6 @@ export const Contact = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(name, email, message);
-
-    // Lógica para enviar el mensaje aquí, por ejemplo, a través de una API.
-
-    // Reiniciar el estado del formulario
     setState(initialState);
   };
 
@@ -126,8 +122,8 @@ export const Contact = (props) => {
                     </a>
                   </li>
                   <li>
-                    <a href={props.data ? props.data.twitter : "/"}>
-                      <i className="fa fa-twitter"></i>
+                    <a href={props.data ? props.data.youtube : "/"}>
+                      <i className="fa fa-youtube"></i>
                     </a>
                   </li>
                   <li>
