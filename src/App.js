@@ -38,8 +38,8 @@ const App = () => {
     <div>
       <Navigation user={user} setUser={setUser} />
       <Header data={landingPageData.Header} />
-      <Features data={landingPageData.Features} />
       <About data={landingPageData.About} />
+      <Features data={landingPageData.Features} />
       <Gallery data={landingPageData.Gallery} />
       <Testimonials data={landingPageData.Testimonials} />
       <Contact data={landingPageData.Contact} />
