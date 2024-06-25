@@ -354,12 +354,70 @@ a:focus,
   outline-offset: none;
 }
 
+/* About Section */
+#about {
+  padding: 50px 0;
+  background: linear-gradient(to bottom, #464646 0%, #3d3d3d 100%);
+}
+#about h3 {
+  font-size: 22px;
+  margin: 0 0 20px;
+}
+#about h2 {
+  position: relative;
+  margin-bottom: 70px;
+  padding-bottom: 15px;
+}
+#about h2::after {
+  position: absolute;
+  content: "";
+  background: rgb(220, 139, 0);
+  height: 4px;
+  width: 325px;
+  bottom: 0;
+  left: 0;
+}
+#about .about-text li {
+  margin-bottom: 6px;
+  margin-left: 6px;
+  list-style: none;
+  padding: 0;
+}
+#about .about-text li:before {
+  content: "\f00c";
+  font-family: "FontAwesome";
+  color: rgb(0, 160, 220);
+  font-size: 11px;
+  font-weight: 300;
+  padding-right: 8px;
+}
+#about .about-text li,
+#about .about-text p {
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  font-weight: 300;
+  padding-right: 8px;
+} 
+#about img {
+  width: 2400px;
+  height: 400px;
+  margin-top: 10px;
+  background: #fff;
+  border-right: 0;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.06);
+}
+#about p {
+  line-height: 24px;
+  margin: 30px 0;
+}
+
 
 /* Features Section */
 #features {
   padding: 60px 0;
-  background: linear-gradient(to bottom, #464646 0%, #3d3d3d 100%);
+  background: linear-gradient(to bottom, #3d3d3d 0%, #252525 100%);
 }
+
 #features img {
   margin-bottom: 40px;
   color: #fff;
@@ -445,62 +503,6 @@ a:focus,
 #features button.active.focus {
   outline: none;
   outline-offset: none;
-}
-/* About Section */
-#about {
-  padding: 50px 0;
-  background: linear-gradient(to bottom, #3d3d3d 0%, #252525 100%);
-}
-#about h3 {
-  font-size: 22px;
-  margin: 0 0 20px;
-}
-#about h2 {
-  position: relative;
-  margin-bottom: 70px;
-  padding-bottom: 15px;
-}
-#about h2::after {
-  position: absolute;
-  content: "";
-  background: rgb(220, 139, 0);
-  height: 4px;
-  width: 325px;
-  bottom: 0;
-  left: 0;
-}
-#about .about-text li {
-  margin-bottom: 6px;
-  margin-left: 6px;
-  list-style: none;
-  padding: 0;
-}
-#about .about-text li:before {
-  content: "\f00c";
-  font-family: "FontAwesome";
-  color: rgb(0, 160, 220);
-  font-size: 11px;
-  font-weight: 300;
-  padding-right: 8px;
-}
-#about .about-text li,
-#about .about-text p {
-  color: rgb(255, 255, 255);
-  font-size: 15px;
-  font-weight: 300;
-  padding-right: 8px;
-} 
-#about img {
-  width: 2400px;
-  height: 400px;
-  margin-top: 10px;
-  background: #fff;
-  border-right: 0;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.06);
-}
-#about p {
-  line-height: 24px;
-  margin: 30px 0;
 }
 
 /* Portfolio Section */
