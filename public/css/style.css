@@ -69,6 +69,10 @@ hr {
   border: 0;
 }
 
+body, html {
+  overflow-x: hidden; 
+}
+
 
 /* Navigation */
 #menu {
