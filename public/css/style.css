@@ -418,7 +418,7 @@ a:focus,
 
 /* Features Section */
 #features {
-  padding: 60px 0;
+  padding: 100px 0;
   background: linear-gradient(to bottom, #3d3d3d 0%, #252525 100%);
 }
 
@@ -431,7 +431,7 @@ a:focus,
   border-radius: 400%;
   background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(220, 139, 0) 200px);
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.445);
-  margin: 12px;
+  margin: 30px;
   margin-bottom: 20px;
 }
 
@@ -455,11 +455,13 @@ a:focus,
   color: #ffffff;
   font-size: 30px;
   margin-bottom: 20px;
+  margin-left: 50px;
 }
 
 #features .features-meta {
   color: #d9d8d6;
   font-size: 14px;
+  margin-left: 50px;
 }
 #features button {
   position: relative;
@@ -472,7 +474,8 @@ a:focus,
   left: 120px;
   top: 10px;
   bottom: 100px;
-  margin-left: 120px;
+  margin: 45px;
+  margin-left: 100px;
   font-size: 15px;
   font-weight: 500;
   border-radius: 25px;

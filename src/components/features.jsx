@@ -26,10 +26,10 @@ export const Features = (props) => {
             : "loading"}     
         </div>
       </div>
-      <button className="btn 1"> Comprar </button>
-      <button className="btn 2"> Comprar </button>
-      <button className="btn 3"> Comprar </button>
-      <button className="btn 4"> Comprar </button>
+      <button className="btn coffee"> Comprar </button>
+      <button className="btn milkshake"> Comprar </button>
+      <button className="btn soda"> Comprar </button>
+      <button className="btn energy"> Comprar </button>
     </div>
   );
 };
