@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { auth } from './firebase';
-import { signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from "firebase/auth";
+import { auth, googleProvider } from './firebase';
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, signInWithPopup } from "firebase/auth";
 
 export const Login = ({ setIsOpen, setUser }) => {
   const [isRegister, setIsRegister] = useState(false);
@@ -30,6 +30,19 @@ export const Login = ({ setIsOpen, setUser }) => {
       });
   };
 
+  const loginWithGoogle = () => {
+    signInWithPopup(auth, googleProvider)
+      .then(({ user }) => {
+        setMessage('Inicio de sesión con Google exitoso');
+        setUser({ ...user });
+        setIsOpen(false);
+      })
+      .catch(error => {
+        setMessage('Error al iniciar sesión con Google: ' + error.message);
+      });
+  };
+
+
   const submitHandler = (e) => {
     e.preventDefault();
     const email = e.target.emailField.value;
@@ -54,6 +67,7 @@ export const Login = ({ setIsOpen, setUser }) => {
           <input type="password" id="passwordField" name="passwordField" required />
           {message && <p>{message}</p>}
           <button type="submit">{isRegister ? "Regístrate" : "Inicia sesión"}</button>
+          <button type="button" onClick={loginWithGoogle}>Google</button>
           <button className="toggle-button" type="button" onClick={() => {
             setIsRegister(!isRegister);
             setMessage(''); 

@@ -5,7 +5,7 @@
   },
 
   "About": {
-    "paragraph": "Identity & Coffee Bar: La tienda Oficial de la Universidad Metropolitana. Ubicados entre Mercantil y Limesama, contamos con Delivery & Pick Up.",
+    "paragraph": "Identity & Coffee Bar. En la Universidad Metropolitana, el local de bebidas, ubicado en el Cafetín y fundado en 2023, donde se ofrecen una variedad de bebidas para estudiantes y personal. Nuestra misión es proporcionar productos de alta calidad con un servicio excepcional, y la visión es ser el punto de referencia en bebidas dentro de la universidad. Este lugar se ha convertido en un popular punto de encuentro para disfrutar y relajarse, ubicados entre Mercantil y Limesama donde contamos con Delivery & Pick Up.",
     "Why": [
       "Tienda Oficial.",
       "Mercancía Sponsorizada.",
@@ -94,5 +94,24 @@
       "name": "Energéticas",
       "text": "Monster, Red Bull, Celsius, Furia..."
     }
-  ]
+  ],
+
+  "Products": {
+    "Cafés": [
+      { "name": "Guayoyo", "description": "Un café tradicional venezolano.", "price": "$2" },
+      { "name": "Oscuro", "description": "Café fuerte y concentrado.", "price": "$3" }
+    ],
+    "Malteadas": [
+      { "name": "Chocolate", "description": "Malteada de chocolate deliciosa.", "price": "$4" },
+      { "name": "Dulce de Leche", "description": "Malteada con sabor a dulce de leche.", "price": "$4.5" }
+    ],
+    "Refrescos": [
+      { "name": "Coca-Cola", "description": "Refresco clásico.", "price": "$1.5" },
+      { "name": "7UP", "description": "Refresco de limón.", "price": "$1.5" }
+    ],
+    "Energéticas": [
+      { "name": "Monster", "description": "Bebida energética potente.", "price": "$3" },
+      { "name": "Red Bull", "description": "Bebida energética popular.", "price": "$3.5" }
+    ]
+  }
 }
