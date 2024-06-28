@@ -11,9 +11,11 @@ export const Product = ({ category, products, onClose, onAddToCart }) => {
         <ul>
           {categoryProducts.map((product, index) => (
             <li key={index} className="product-item">
-              <h3>{product.name}</h3>
-              <p>{product.description}</p>
-              <p>{product.price}</p>
+              <div className="product-info">
+                <h3>{product.name}</h3>
+                <p>{product.description}</p>
+                <p>{product.price}</p>
+              </div>
               <button className="add-to-cart" onClick={() => onAddToCart(product)}>Añadir al carrito</button>
             </li>
           ))}
